@@ -58,7 +58,7 @@ public class Principal {
                     break;
 
                 case 2:
-                    
+                     //chama o metodo de listagem,e  se retornar true ele exibe e pede pra remover chamado o meto de remoção
                     if (cofrinho.listagemMoedas()) { 
                         System.out.println("Digite o código da moeda que deseja remover:");
                         int cod = teclado.nextInt();
