@@ -58,14 +58,12 @@ public class Principal {
                     break;
 
                 case 2:
-                    // Chamamos a listagem
-                    System.out.println("Codigo/moeda/valor");
-                    cofrinho.listagemMoedas(); 
-                    //peço pro usuario selecionar a moeda
-                    System.out.println("Digite o código da moeda que deseja remover:");
-                    int cod = teclado.nextInt();
-                    // Chama o metodo de remover
-                    cofrinho.remover(cod); 
+                    
+                    if (cofrinho.listagemMoedas()) { 
+                        System.out.println("Digite o código da moeda que deseja remover:");
+                        int cod = teclado.nextInt();
+                        cofrinho.remover(cod);
+                    }
                     break;
                   
                 case 3:

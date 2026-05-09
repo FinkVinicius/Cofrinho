@@ -25,17 +25,18 @@ public class Cofrinho {
 }
 
     // exibe a losta de moedas, se ela n estiver vazia
-    public void listagemMoedas() {
+    public boolean listagemMoedas() { 
+        //verifica se a lista n está vazia, e se n estiver retorana ela
         if (this.listaMoedas.isEmpty()) {
-            System.out.println("O cofrinho está vazio");
-            return;
+            System.out.println("O cofrinho está vazio!");
+            return false; 
         }    
-        //aqui mostro esse cod na frente pra quando o usuario for excluir saber que o numero do lado é o indice da moeda e o info me tras da classe da moeda o nomedela
         for (int i = 0; i < this.listaMoedas.size(); i++) {
-            System.out.print("cod: " + i + "/"); 
+            System.out.print("cod: " + i + " / "); 
             this.listaMoedas.get(i).info();
         }
-}
+        return true;
+    }
 
     // Calcula o valor total em R$ somando os valores depois de converter cada uma em sua classe
     public double totalConvertido() {
